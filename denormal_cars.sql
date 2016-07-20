@@ -23,7 +23,7 @@ CREATE DATABASE "denormal_cars" OWNER "denormal_user";
 -- 1. Inspect the table named `car_models` by running `\dS` and look at the data using some `SELECT` statements
 --SELECT * FROM carmodels;
 -- 1. In `denormal.sql` Create a query to get a list of all `make_title` values in the `car_models` table, without any duplicate rows. (should have 71 results)
-SELECT DISTINCT ON (make_title) make_title
+SELECT DISTINCT (make_title)
   FROM car_models;
 
 -- 1. In `denormal.sql` Create a query to list all `model_title` values where the `make_code` is `'VOLKS'`, without any duplicate rows (should have 27 results)
